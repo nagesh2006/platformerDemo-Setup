@@ -149,3 +149,5 @@ layer_0/tile_data = PackedInt32Array(5, 0, 1, 6, 0, 1, 7, 0, 1, 8, 0, 1, 9, 0, 1
 
 [node name="player" parent="TileMap" instance=ExtResource("2_do6qt")]
 position = Vector2(7, -1)
+speed = 5
+jump_power = 7
