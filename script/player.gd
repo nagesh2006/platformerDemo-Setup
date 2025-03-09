@@ -37,18 +37,15 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("idle")
 	
 	move_and_slide()
+	
 func killPlayer():
 	position =%SpawnPoint.position
 	$AnimatedSprite2D.flip_h = false
 	
 
-<<<<<<< HEAD
-func _on_death_area_body_entered(body: Node2D) -> void:
-	killPlayer()
-=======
-	move_and_slide()
-
-
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/scene/options_menu.tscn")
->>>>>>> 4ad51bbfe2fee129cfc32d50b279f3cb19b6ab82
+
+
+func _on_death_zone_body_entered(body: Node2D) -> void:
+	killPlayer()
