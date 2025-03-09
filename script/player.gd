@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -1900.0
 
 @export var run_multiplier = 1
 
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -42,13 +44,10 @@ func killPlayer():
 	$AnimatedSprite2D.flip_h = false
 	
 
-<<<<<<< HEAD
 func _on_death_area_body_entered(body: Node2D) -> void:
 	killPlayer()
-=======
 	move_and_slide()
 
 
-func _on_button_pressed() -> void:
+func _on_playeroptions_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/scene/options_menu.tscn")
->>>>>>> 4ad51bbfe2fee129cfc32d50b279f3cb19b6ab82

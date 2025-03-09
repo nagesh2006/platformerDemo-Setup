@@ -1,12 +1,11 @@
-[gd_scene load_steps=18 format=4 uid="uid://cuvihbf3ebewa"]
+[gd_scene load_steps=16 format=4 uid="uid://cuvihbf3ebewa"]
 
 [ext_resource type="Texture2D" uid="uid://bhqrtu74exgn3" path="res://world/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_xr586"]
 [ext_resource type="Texture2D" uid="uid://biklkdj4vcrnl" path="res://world/Mossy Tileset/Mossy - Hanging Plants.png" id="2_lfhww"]
 [ext_resource type="Texture2D" uid="uid://0tafiaoy3vji" path="res://world/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_hi2ah"]
 [ext_resource type="Texture2D" uid="uid://coft1xcdit3lq" path="res://world/Mossy Tileset/Mossy - TileSet.png" id="4_ult1a"]
-[ext_resource type="PackedScene" uid="uid://3q3g5d3kr8wl" path="res://Assets/scene/player.tscn" id="5_61kvl"]
+[ext_resource type="PackedScene" uid="uid://c5oaphnvyw5sd" path="res://Assets/scene/player.tscn" id="5_61kvl"]
 [ext_resource type="PackedScene" uid="uid://3m0401p65pri" path="res://Assets/scene/coin.tscn" id="6_1oax0"]
-[ext_resource type="PackedScene" uid="uid://dyf8brx13inx4" path="res://Assets/scene/enemy1.tscn" id="7_ooqql"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qrv6a"]
 texture = ExtResource("1_xr586")
@@ -379,8 +378,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k617d")
 sources/1 = SubResource("TileSetAtlasSource_vmrph")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0qdf"]
-
 [node name="level1" type="Node2D"]
 
 [node name="Tilemaps" type="Node" parent="."]
@@ -500,36 +497,3 @@ position = Vector2(21453, -71)
 
 [node name="coin30" parent="coins" instance=ExtResource("6_1oax0")]
 position = Vector2(21636, -62)
-
-[node name="DeathArea" type="Area2D" parent="."]
-position = Vector2(31, 3340)
-scale = Vector2(6651.96, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
-shape = SubResource("RectangleShape2D_o0qdf")
-
-[node name="SpawnPoint" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-2557, 30)
-
-[node name="enemies" type="Node" parent="."]
-
-[node name="enemy1" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(2740, -63)
-
-[node name="enemy2" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(6685, -63)
-
-[node name="enemy3" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(9789, -75)
-
-[node name="enemy4" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(14212, -48)
-
-[node name="enemy5" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(17081, -58)
-
-[node name="enemy6" parent="enemies" instance=ExtResource("7_ooqql")]
-position = Vector2(23081, -66)
-
-[connection signal="body_entered" from="DeathArea" to="player" method="_on_death_area_body_entered"]
