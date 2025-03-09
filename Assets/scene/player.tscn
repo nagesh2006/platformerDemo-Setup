@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=69 format=3 uid="uid://c5oaphnvyw5sd"]
+=======
+[gd_scene load_steps=66 format=3 uid="uid://3q3g5d3kr8wl"]
+>>>>>>> 4245f5ecf8dabcdb8f7d2f3f701034cee0001b95
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_7wxh6"]
 [ext_resource type="Texture2D" uid="uid://ef3gaf1pir2o" path="res://sprite/BlueWizard/2BlueWizardIdle/Chara - BlueIdle00000.png" id="1_hvmef"]
@@ -56,10 +60,15 @@
 [ext_resource type="Texture2D" uid="uid://bifmcchh7mpgd" path="res://sprite/UI/button J-2.png" id="54_m2yg3"]
 [ext_resource type="Texture2D" uid="uid://cjyswmaogv6e" path="res://sprite/UI/button J-3.png" id="55_kpu6q"]
 [ext_resource type="Texture2D" uid="uid://dkku4xjg0vqvs" path="res://sprite/UI/button J-4.png" id="56_fwssi"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bv43hcnnu2c6l" path="res://sprite/UI/button M-1.png" id="57_uds40"]
 [ext_resource type="Texture2D" uid="uid://dbjd2ucepcy8l" path="res://sprite/UI/button M-2.png" id="58_yyr1k"]
 [ext_resource type="Texture2D" uid="uid://c8xdi46i8xc4m" path="res://sprite/UI/button M-3.png" id="59_i30nb"]
 [ext_resource type="Texture2D" uid="uid://w3yh766pcory" path="res://sprite/UI/Button M-4.png" id="60_6qbwm"]
+=======
+[ext_resource type="Texture2D" uid="uid://dq20klqfrmq0y" path="res://sprite/UI/button L-1.png" id="57_7gjnn"]
+[ext_resource type="Script" path="res://script/menu.gd" id="58_ipga2"]
+>>>>>>> 4245f5ecf8dabcdb8f7d2f3f701034cee0001b95
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_12t6p"]
 animations = [{
@@ -246,6 +255,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("56_fwssi")
 frame_2/duration = 1.0
 
+<<<<<<< HEAD
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ydcyg"]
 frame_0/texture = ExtResource("57_uds40")
 
@@ -256,6 +266,10 @@ frame_1/texture = ExtResource("59_i30nb")
 frame_1/duration = 1.0
 frame_2/texture = ExtResource("60_6qbwm")
 frame_2/duration = 1.0
+=======
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_usawv"]
+frame_0/texture = ExtResource("57_7gjnn")
+>>>>>>> 4245f5ecf8dabcdb8f7d2f3f701034cee0001b95
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7wxh6")
@@ -273,6 +287,10 @@ shape = SubResource("CapsuleShape2D_gkh56")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(93, -84)
 zoom = Vector2(0.535, 0.535)
+<<<<<<< HEAD
+=======
+limit_bottom = 800
+>>>>>>> 4245f5ecf8dabcdb8f7d2f3f701034cee0001b95
 
 [node name="Buttons" type="Control" parent="Camera2D"]
 layout_mode = 3
@@ -312,4 +330,8 @@ scale = Vector2(12, 12)
 texture_normal = SubResource("AnimatedTexture_ydcyg")
 texture_pressed = SubResource("AnimatedTexture_hepl6")
 
+<<<<<<< HEAD
 [connection signal="pressed" from="Camera2D/Buttons/playeroptions" to="." method="_on_playeroptions_pressed"]
+=======
+[connection signal="pressed" from="Camera2D/Buttons/Button" to="." method="_on_button_pressed"]
+>>>>>>> 4245f5ecf8dabcdb8f7d2f3f701034cee0001b95
