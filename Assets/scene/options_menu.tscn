@@ -18,6 +18,10 @@ func _on_load_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://Assets/scene/menu.tscn\")
+
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 "
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_taowp"]
@@ -147,6 +151,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gts7u")
 text = "Back
 "
 
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.431373, 0.768627, 0.85098, 1)
+theme_override_fonts/font = ExtResource("2_2fn08")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_k36pq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k36pq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_k36pq")
+text = "Exit
+"
+
 [connection signal="pressed" from="VBoxContainer/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
